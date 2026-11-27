@@ -17,42 +17,21 @@ h1{font:700 clamp(28px,6vw,42px)/1.05 "Space Grotesk",Inter,sans-serif;margin:0 
 button{font:700 17px "Space Grotesk",Inter,sans-serif;letter-spacing:.06em;color:#14171c;background:var(--up);border:2px solid var(--ink);border-radius:10px;min-height:52px;padding:0 28px;margin:24px 0 12px;cursor:pointer}
 button:focus-visible{outline:3px solid var(--up);outline-offset:3px}
 #msg{min-height:1.5em;font-weight:600;color:var(--up);margin:0 0 20px}
-ol{text-align:left;color:var(--mute);max-width:520px;margin:0 auto;padding-left:1.4em}
+ol{text-align:left;color:var(--mute);max-width:560px;margin:28px auto 0;padding-left:1.4em}
+li{margin-bottom:6px}
 </style></head><body>
 <main>
 <a class="home" href="../">PCRED BOOKS</a>
 <h1>SHARE BY EMAIL</h1>
-<div id="card"><a href="https://louiefish.github.io/"><img src="https://louiefish.github.io/og-home.png" width="600" height="315" alt="PCRED BOOKS"></a></div>
-<div><button id="copy" type="button">COPY PICTURE WITH LINK</button></div>
-<p id="msg" role="status"></p>
+<div id="card"><img src="https://louiefish.github.io/og-home.png" width="600" height="315" alt="PCRED BOOKS"></div>
 <ol>
-<li>Press COPY PICTURE WITH LINK.</li>
+<li>Right click the picture above and choose Copy image.</li>
 <li>Open Gmail and start a new email.</li>
-<li>Press and hold (iPhone) or right click (computer) in the message and choose Paste.</li>
-<li>Tapping the picture in the email opens louiefish.github.io.</li>
+<li>Right click in the message and choose Paste. The picture goes in.</li>
+<li>Press Enter for a new line under the picture and type CLICK HERE.</li>
+<li>Double click CLICK HERE to highlight it. Click the chain link icon in the bottom toolbar, paste https://louiefish.github.io into the box, and click OK.</li>
+<li>Send. Tapping CLICK HERE opens louiefish.github.io.</li>
 </ol>
 </main>
-<script>
-{
-const card=document.getElementById("card"),msg=document.getElementById("msg");
-const html=card.innerHTML,text="https://louiefish.github.io/";
-function fallback(){
-  const r=document.createRange();r.selectNode(card);
-  const s=getSelection();s.removeAllRanges();s.addRange(r);
-  const ok=document.execCommand("copy");s.removeAllRanges();return ok;
-}
-document.getElementById("copy").addEventListener("click",async()=>{
-  let ok=false;
-  /* copy the picture the same way a person selecting it and pressing copy would; picture only, no plain-text link */
-  try{ok=fallback()}catch(_){}
-  if(!ok){
-    try{
-      await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([html],{type:"text/html"})})]);
-      ok=true;
-    }catch(_){}
-  }
-  msg.textContent=ok?"Copied. Paste it into your Gmail message.":"Copy did not work here. Press and hold the picture and choose Copy.";
-});
-}
-</script>
+
 </body></html>
