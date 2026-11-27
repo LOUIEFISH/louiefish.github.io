@@ -25,14 +25,9 @@ ol{text-align:left;color:var(--mute);max-width:520px;margin:0 auto;padding-left:
 <a class="home" href="../">RETURN HOME</a>
 <h1>SHARE BY EMAIL</h1>
 <div id="card"><a href="https://louiefish.github.io/"><img src="https://louiefish.github.io/og-home.png" width="600" height="315" alt="PCRED BOOKS"></a></div>
-<div><button id="copy" type="button">COPY PICTURE WITH LINK</button></div>
+<div><button id="copy" type="button">SHARE LINK - COPY/PASTE</button></div>
 <p id="msg" role="status"></p>
-<ol>
-<li>Press COPY PICTURE WITH LINK.</li>
-<li>Open Gmail and start a new email.</li>
-<li>Press and hold (iPhone) or right click (computer) in the message and choose Paste.</li>
-<li>Tapping the picture in the email opens louiefish.github.io.</li>
-</ol>
+
 </main>
 <script>
 {
@@ -53,7 +48,7 @@ document.getElementById("copy").addEventListener("click",async()=>{
       ok=true;
     }catch(_){}
   }
-  msg.textContent=ok?"Copied. Paste it into your Gmail message.":"Copy did not work here. Press and hold the picture and choose Copy.";
+  msg.textContent=ok?"Copied. Paste it into your email.":"Copy did not work here. Press and hold the picture and choose Copy.";
 });
 }
 </script>
