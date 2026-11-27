@@ -37,6 +37,7 @@ tr:last-child td{border-bottom:0}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .UP{color:var(--up)}.DOWN{color:var(--dn)}.NO{color:var(--no)}
 .chg{font-weight:700;white-space:nowrap}
+.ct{color:var(--mute);font-size:13px;letter-spacing:.06em;margin-left:6px}
 .src{color:var(--mute);font-size:14px;margin-top:20px}
 @media(max-width:600px){table{font-size:15px}.stack thead{display:none}.stack tr{display:grid;padding:10px 14px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:4px 0;padding-inline-start:8.5em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.75em;margin-inline-start:-8.5em;color:var(--mute);font-size:14px}}
 </style></head><body>
@@ -44,7 +45,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 <a class="home" href="../">RETURN HOME</a>
 <h1>DOGECOIN SPIKE TRACKER</h1>
 <p class="q">How did Dogecoin move on this date this year and in each of the past five years?</p>
-<div class="row"><div><label for="d">Date</label><input type="date" id="d"></div><button id="today" type="button">Latest close</button></div>
+<div class="row"><div><label for="d">Date <span class="ct">COINBASE TIME</span></label><input type="date" id="d"></div><button id="today" type="button">Latest close</button></div>
 <table class="stack"><thead><tr><th>Date</th><th style="text-align:right">Closing price</th><th style="text-align:right">7-day change</th></tr></thead><tbody id="t"></tbody></table>
 <p class="src">Prices: Coinbase DOGE-USD daily close at midnight UTC, live from Coinbase each time the page opens. History begins Jun 3, 2021. 7-day change compares the closing price to the close 7 days earlier. Each day's close is set at 7 pm Eastern (8 pm during daylight saving time).</p>
 </main>
