@@ -19,8 +19,9 @@
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:clip}
 .band{max-width:900px;margin:0 auto;padding:clamp(24px,4vw,56px) max(5vw,16px)}
-.home{display:inline-block;color:var(--mute);text-decoration:none;font-weight:600;margin-bottom:16px}
-.home:hover{color:var(--ink)}
+.home{display:inline-block;font:700 15px/1 "Space Grotesk",Inter,sans-serif;letter-spacing:.06em;color:var(--ink);text-decoration:none;background:var(--panel);border:2px solid var(--line);border-radius:10px;padding:12px 18px;margin-bottom:20px}
+.home:focus-visible{outline:3px solid var(--up);outline-offset:3px}
+.home:hover{border-color:var(--up)}
 h1{font:700 clamp(28px,6vw,44px)/1.05 "Space Grotesk",Inter,sans-serif;margin:0 0 8px;text-wrap:balance}
 .q{color:var(--mute);margin:0 0 24px}
 label{display:block;font-weight:600;margin-bottom:8px}
@@ -40,7 +41,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 @media(max-width:600px){table{font-size:15px}.stack thead{display:none}.stack tr{display:grid;padding:10px 14px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:4px 0;padding-inline-start:8.5em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.75em;margin-inline-start:-8.5em;color:var(--mute);font-size:14px}}
 </style></head><body>
 <main class="band">
-<a class="home" href="../">PCRED BOOKS</a>
+<a class="home" href="../">RETURN HOME</a>
 <h1>DOGECOIN SPIKE TRACKER</h1>
 <p class="q">How did Dogecoin move on this date this year and in each of the past five years?</p>
 <div class="row"><div><label for="d">Date</label><input type="date" id="d"></div><button id="today" type="button">Latest close</button></div>
